@@ -8,10 +8,20 @@ export default function AgeCounter() {
 
     return (
         <>
-            <TouchableOpacity onPress={() => setAge(age + 1)}>
-                <Text>Augmenter</Text>
+            <TouchableOpacity style={s.button} onPress={() => setAge(age + 1)}>
+                <Text style={{color: 'white'}}>Augmenter</Text>
             </TouchableOpacity>
             <Text>J'ai {age} ans</Text>
         </>
     )
 }
+
+const s = StyleSheet.create({
+    button : {
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        backgroundColor: '#0080FF',
+        borderRadius: 10,
+        alignSelf: "flex-start"
+    }
+})
